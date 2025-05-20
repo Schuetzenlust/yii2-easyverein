@@ -24,7 +24,7 @@ class EasyVerein extends Component
 
     public function getContactDetail($id)
     {
-        return $this->_client->get('contact-details/{$id}');
+        return $this->_client->get('contact-details/{$id}/');
     }
 
     /*
@@ -38,7 +38,7 @@ class EasyVerein extends Component
 
     public function getMember($id)
     {
-        return $this->_client->get("member/{$id}/");
+        return $this->_client->get("member/{$id}/?query={id,contactDetails{id,name},org{id,name,short},emailOrUserName,membershipNumber}");
     }
 
     public function createMember($data)
