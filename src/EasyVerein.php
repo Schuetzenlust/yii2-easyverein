@@ -19,26 +19,26 @@ class EasyVerein extends Component
 
     public function getMembers($params = [])
     {
-        return $this->_client->get('mitglied/', $params);
+        return $this->_client->get('member/', $params);
     }
 
     public function getMember($id)
     {
-        return $this->_client->get("mitglied/{$id}/");
+        return $this->_client->get("member/{$id}/");
     }
 
     public function createMember($data)
     {
-        return $this->_client->post("mitglied/", $data);
+        return $this->_client->post("member/", $data);
     }
 
     public function updateMember($id, $data)
     {
-        return $this->_client->put("mitglied/{$id}/", $data);
+        return $this->_client->put("member/{$id}/", $data);
     }
 
     public function deleteMember($id)
     {
-        return $this->_client->delete("mitglied/{$id}/");
+        return $this->_client->delete("member/{$id}/");
     }
 }
