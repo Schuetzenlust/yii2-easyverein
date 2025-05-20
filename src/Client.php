@@ -8,7 +8,7 @@ class Client
 {
     private $client;
     private $apiToken;
-    private $baseUrl = 'https://app.easyverein.com/api/v1.7/';
+    private $baseUrl = 'https://easyverein.com/api/v1.7/';
 
     public function __construct($apiToken)
     {
