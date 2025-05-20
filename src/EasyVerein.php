@@ -24,7 +24,7 @@ class EasyVerein extends Component
 
     public function getContactDetail($id)
     {
-        return $this->_client->get('contact-details/{$id}', $params);
+        return $this->_client->get('contact-details/{$id}');
     }
 
     /*
