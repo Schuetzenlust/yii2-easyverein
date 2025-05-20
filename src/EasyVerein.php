@@ -17,6 +17,20 @@ class EasyVerein extends Component
         $this->_client = new Client($this->apiToken);
     }
 
+    public function getContactDetails($params = [])
+    {
+        return $this->_client->get('contact-details/', $params);
+    }
+
+    public function getContactDetail($id)
+    {
+        return $this->_client->get('contact-details/{$id}', $params);
+    }
+
+    /*
+    ---------------------------------------------------------------
+    */
+
     public function getMembers($params = [])
     {
         return $this->_client->get('member/', $params);
