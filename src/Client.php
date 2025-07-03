@@ -10,9 +10,10 @@ class Client
     private $apiToken;
     private $baseUrl = 'https://easyverein.com/api/v1.7/';
 
-    public function __construct($apiToken)
+    public function __construct($apiToken, $baseUrl)
     {
         $this->apiToken = $apiToken;
+        $this->baseUrl = $baseUrl;
         $this->client = new GuzzleClient([
             'base_uri' => $this->baseUrl,
             'headers' => [
@@ -22,7 +23,7 @@ class Client
             ]
         ]);
     }
-
+    
     public function get($endpoint, $params = [])
     {
         try {
